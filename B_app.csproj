@@ -7,19 +7,43 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Repository\**" />
+    <Compile Remove="Data\**" />
+    <Compile Remove="Pages\**" />
+    <Compile Remove="Adapters\Sql\Repository\ClienteRepo.cs" />
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Remove="Repository\**" />
+    <EmbeddedResource Remove="Data\**" />
+    <EmbeddedResource Remove="Pages\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Remove="Repository\**" />
+    <None Remove="Data\**" />
+    <None Remove="Pages\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <Content Remove="Repository\**" />
+    <Content Remove="Data\**" />
+    <Content Remove="Pages\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="2.0.123" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="Pages\Error.cshtml" />
+    <_ContentIncludedByDefault Remove="Pages\Index.cshtml" />
+    <_ContentIncludedByDefault Remove="Pages\Privacy.cshtml" />
+    <_ContentIncludedByDefault Remove="Pages\Shared\_Layout.cshtml" />
+    <_ContentIncludedByDefault Remove="Pages\Shared\_ValidationScriptsPartial.cshtml" />
+    <_ContentIncludedByDefault Remove="Pages\_ViewImports.cshtml" />
+    <_ContentIncludedByDefault Remove="Pages\_ViewStart.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Adapters\Sql" />
   </ItemGroup>
 
 </Project>
