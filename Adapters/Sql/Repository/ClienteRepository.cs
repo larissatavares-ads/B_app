@@ -20,7 +20,7 @@ public class ClienteRepository : IClienteRepository
         {
             conexao.Open();
             await conexao
-                .ExecuteAsync("INSERT INTO Cliente (Nome, Cpf) VALUES (@Nome, @Cpf);", titular)
+                .ExecuteAsync("INSERT INTO Cliente (Nome, Cpf) VALUES (@Nome, @Cpf);", titular);
         }
     }
 }
